@@ -107,7 +107,7 @@ int getDiffHours(int baseHours)
   // 時間の差を計算
   long hours = now.substring(11, 13).toInt();
   long minutes = now.substring(14, 16).toInt();
-  long diffHours = (hours > baseHours) ? (24 % (hours - baseHours)) : (baseHours - hours);
+  long diffHours = (hours > baseHours) ? (24 - (hours - baseHours)) : (baseHours - hours);
 
   if (minutes > 0)
   {
